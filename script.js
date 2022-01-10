@@ -53,9 +53,9 @@ countCars = data => {
   let count = document.getElementById('counter');
 
   if (data) {
-    count.innerHTML = `We have ${data} cars in total`;
+    count.innerHTML = `<h4>We have ${data} cars in total</h4>`;
   } else {
-    count.innerHTML = 'No cars found, try next time';
+    count.innerHTML = '<h4>No cars found, try next time</h4> ';
     document.getElementById('name').style.display = 'none';
   }
 };
@@ -67,7 +67,7 @@ countCars = data => {
     let data = '';
     if (cars.length > 0) {
       for (i = 0; i < cars.length; i++) {
-        data += `<tr>
+        data += `<tr id="myList">
         <td> ${cars[i].name} </td>
         <td> ${cars[i].founder} </td>
         <td> ${cars[i].year} </td>
@@ -85,17 +85,19 @@ addCar = () => {
   let founderAdd = document.getElementById('add-founder');
   let yearAdd = document.getElementById('add-year');
 
-    // Object
-    let car = {
-        name: nameAdd.value.trim(),
-        founder:founderAdd.value.trim(),
-        year: yearAdd.value.trim()
-      }
+   
 
   // Get the value
   let name = nameAdd.value;
   let founder = founderAdd.value;
   let year = yearAdd.value;
+
+   // Object
+   let car = {
+    name: name,
+    founder:founder,
+    year: year
+  }
 
   if (name && founder && year) {
     // addCar the new value
@@ -163,6 +165,29 @@ getCars();
 closeInput = () => {
   document.getElementById('editForm').style.display = 'none';
 }
+
+// Search Function
+function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
 
 
 

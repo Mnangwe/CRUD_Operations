@@ -7,3 +7,7 @@ input[type='submit'], button, [aria-label]{
   #counter {
       font-weight: bold;
   }
+
+  table {
+      border-spacing: 10px;
+  }

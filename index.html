@@ -12,13 +12,17 @@
     <h1>List of Cars</h1>
 
 <form action="javascript:void(0);" onsubmit="addCar()"> 
-  <input type="text" id="add-name" placeholder="Add new car">
+  <input type="text" id="add-name" placeholder="Name of a Car">
+  <input type="text" id="add-founder" placeholder="Founder">
+  <input type="text" id="add-year" placeholder="Year founded">
   <input type="submit" value="Add">
 </form>
 
 <div id="editForm">
   <form action="javascript:void(0);" id="saveEdit">
     <input type="text" id="edit-name">
+    <input type="text" id="edit-founder">
+    <input type="text" id="edit-year">
     <input type="submit" value="Edit" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
   </form>
 </div>
@@ -29,7 +33,13 @@
   <tr>
     <th id="name">Car Names:</th>
   </tr>
+  <tr>
+    <th>Name</th>
+    <th>Founder</th>
+    <th>Year</th>
+  </tr>
     <tbody id="cars">
+        
     </tbody>
 </table>
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation | Static Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>List of Cars</h1>
+
+<form action="javascript:void(0);" onsubmit="addCar()"> 
+  <input type="text" id="add-name" placeholder="Add new car">
+  <input type="submit" value="Add">
+</form>
+
+<div id="editForm">
+  <form action="javascript:void(0);" id="saveEdit">
+    <input type="text" id="edit-name">
+    <input type="submit" value="Edit" /> <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+  </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+  <tr>
+    <th id="name">Car Names:</th>
+  </tr>
+    <tbody id="cars">
+    </tbody>
+</table>
+
+    <script src="script.js"></script>
+</body>
+</html>

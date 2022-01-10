@@ -13,8 +13,11 @@ input[type='submit'], button, [aria-label]{
   }
 
 /* search button */
+#myInput {
+    background-image: url('icons8-search-32.png');
+    width: 40%; /* Add a search icon to input */
+}
 #myInput, #add-name, #add-founder, #add-year, #edit-name, #edit-founder, #edit-year, button, input[type='submit'] {
-    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
     background-position: 10px 12px; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
     /* width: 100%; Full-width */

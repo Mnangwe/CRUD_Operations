@@ -68,7 +68,7 @@ countCars = data => {
     if (cars.length > 0) {
       for (i = 0; i < cars.length; i++) {
         data += `<tr id="myList">
-        <td> ${cars[i].name} </td>
+        <td>${i+1}. ${ cars[i].name } </td>
         <td> ${cars[i].founder} </td>
         <td> ${cars[i].year} </td>
          <td><button onclick="editCar( ${i} )">Edit</button></td>
@@ -109,6 +109,8 @@ addCar = () => {
     yearAdd.value = '';
     // Dislay the new list
     getCars();
+  }else {
+      confirm('Fill in all the spaces')
   }
 };
 

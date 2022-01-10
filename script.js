@@ -1,13 +1,5 @@
 let carList = document.getElementById('cars');
 let cars = ['Abarth', 'Acura', 'Alfa Romeo', 'Aston Martin', 'Audi', 'Bentley', 'BMW', 'Buick', 'Chevrolet', 'Ferrari', 'Ford', 'GMC', 'Jaguar', 'Mercedes-Benz', 'Toyota'];
-
-
-
-
-
-
-
-
   
 countCars = data => {
   let count = document.getElementById('counter');
@@ -35,8 +27,6 @@ countCars(cars.length);
       }
     }
   
-
- 
   return carList.innerHTML = data;
 };
 // Create: POST

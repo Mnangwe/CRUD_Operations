@@ -14,7 +14,7 @@ input[type='submit'], button, [aria-label]{
 
 /* search button */
 #myInput {
-    background-image: url('icons8-search-32.png');
+    background-image: url('./icons/icons8-search-32.png');
     width: 40%; /* Add a search icon to input */
 }
 #myInput, #add-name, #add-founder, #add-year, #edit-name, #edit-founder, #edit-year, button, input[type='submit'] {
